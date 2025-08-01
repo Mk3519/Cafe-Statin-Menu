@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Station Menu</title>
+    <link rel="icon" href="image/logo2.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
+    <main class="page-content">
+    <div class="container py-5">
+        <!-- Language Selector -->
+        <div class="language-selector text-end mb-3">
+            <button class="btn btn-sm btn-outline-primary" onclick="toggleLanguage()">
+                <span data-lang="en">Arabic</span>
+                <span data-lang="ar">English</span>
+            </button>
+        </div>
+
+        <!-- Header -->
+        <header class="text-center mb-5">
+            <div class="logo-container mb-4">
+                <img src="image/logo2.png" alt="Cafe Station Logo" class="cafe-logo" loading="eager">
+            </div>
+            <h1 class="display-4">
+                <span data-lang="en">Cafe Station</span>
+                <span data-lang="ar"> كافيه استيشن</span>
+            </h1>
+            <p class="lead">
+                <span data-lang="en">Menu</span>
+                <span data-lang="ar">قائمة الكافيه</span>
+            </p>
+        </header>
+
+        <!-- Sandwiches Section -->
+        <section id="sandwiches" class="menu-section mb-5">
+            <div class="section-title">
+                <h2 class="section-heading">
+                    <span data-lang="en">Sandwiches</span>
+                    <span data-lang="ar">السندوتشات</span>
+                </h2>
+            </div>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Chicken Club Sandwich</span>
+                        <span data-lang="ar">كلوب ساندوتش دجاج</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">28 SR</span>
+                    <span class="price" data-lang="ar">28 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Grilled Cheese</span>
+                        <span data-lang="ar">جبنة مشوية</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">22 SR</span>
+                    <span class="price" data-lang="ar">22 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Tuna Sandwich</span>
+                        <span data-lang="ar">ساندوتش تونة</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">24 SR</span>
+                    <span class="price" data-lang="ar">24 ريال</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bakery Section -->
+        <section id="bakery" class="menu-section mb-5">
+            <div class="section-title">
+                <h2 class="section-heading">
+                    <span data-lang="en">Bakery</span>
+                    <span data-lang="ar">المخبوزات</span>
+                </h2>
+            </div>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Croissant</span>
+                        <span data-lang="ar">كرواسون</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">12 SR</span>
+                    <span class="price" data-lang="ar">12 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Cheese Danish</span>
+                        <span data-lang="ar">دانش بالجبنة</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">14 SR</span>
+                    <span class="price" data-lang="ar">14 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Chocolate Muffin</span>
+                        <span data-lang="ar">مافن شوكولاتة</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">10 SR</span>
+                    <span class="price" data-lang="ar">10 ريال</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hot Drinks Section -->
+        <section id="hot-drinks" class="menu-section mb-5">
+            <div class="section-title">
+                <h2 class="section-heading">
+                    <span data-lang="en">Hot Drinks</span>
+                    <span data-lang="ar">المشروبات الساخنة</span>
+                </h2>
+            </div>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Turkish Coffee</span>
+                        <span data-lang="ar">قهوة تركية</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">15 EGP</span>
+                    <span class="price" data-lang="ar">15 جنيه</span>
+                </div>
+                                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Turkish Coffee</span>
+                        <span data-lang="ar">قهوة تركية</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">15 SR</span>
+                    <span class="price" data-lang="ar">15 ريال</span>
+                </div>
+                                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Turkish Coffee</span>
+                        <span data-lang="ar">قهوة تركية</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">15 SR</span>
+                    <span class="price" data-lang="ar">15 ريال</span>
+                </div>
+                                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Turkish Coffee</span>
+                        <span data-lang="ar">قهوة تركية</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">15 SR</span>
+                    <span class="price" data-lang="ar">15 ريال</span>
+                </div>
+                                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Turkish Coffee</span>
+                        <span data-lang="ar">قهوة تركية</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">15 SR</span>
+                    <span class="price" data-lang="ar">15 ريال</span>
+                </div>
+                                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Turkish Coffee</span>
+                        <span data-lang="ar">قهوة تركية</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">15 SR</span>
+                    <span class="price" data-lang="ar">15 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name" data-lang="en">Cappuccino</span>
+                    <span class="item-name" data-lang="ar">كابتشينو</span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">18 SR</span>
+                    <span class="price" data-lang="ar">18 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name" data-lang="en">Mint Tea</span>
+                    <span class="item-name" data-lang="ar">شاي بالنعناع</span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">12 SR</span>
+                    <span class="price" data-lang="ar">12 ريال</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cold Drinks Section -->
+        <section id="cold-drinks" class="menu-section mb-5">
+            <div class="section-title">
+                <h2 class="section-heading">
+                    <span data-lang="en">Cold Drinks</span>
+                    <span data-lang="ar">المشروبات الباردة</span>
+                </h2>
+            </div>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Fresh Orange Juice</span>
+                        <span data-lang="ar">عصير برتقال طازج</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">16 SR</span>
+                    <span class="price" data-lang="ar">16 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name" data-lang="en">Chocolate Milkshake</span>
+                    <span class="item-name" data-lang="ar">ميلك شيك شوكولاتة</span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">20 SR</span>
+                    <span class="price" data-lang="ar">20 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name" data-lang="en">Fresh Lemonade</span>
+                    <span class="item-name" data-lang="ar">ليموناضة منعشة</span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">14 SR</span>
+                    <span class="price" data-lang="ar">14 ريال</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hot Coffee Section -->
+        <section id="hot-coffee" class="menu-section mb-5">
+            <div class="section-title">
+                <h2 class="section-heading">
+                    <span data-lang="en">Hot Coffee</span>
+                    <span data-lang="ar">القهوة الساخنة</span>
+                </h2>
+            </div>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Espresso</span>
+                        <span data-lang="ar">اسبريسو</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">12 SR</span>
+                    <span class="price" data-lang="ar">12 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Cafe Latte</span>
+                        <span data-lang="ar">كافيه لاتيه</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">18 SR</span>
+                    <span class="price" data-lang="ar">18 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Mocha</span>
+                        <span data-lang="ar">موكا</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">20 SR</span>
+                    <span class="price" data-lang="ar">20 ريال</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fresh Juice Section -->
+        <section id="fresh-juice" class="menu-section mb-5">
+            <div class="section-title">
+                <h2 class="section-heading">
+                    <span data-lang="en">Fresh Juice</span>
+                    <span data-lang="ar">العصائر الطازجة</span>
+                </h2>
+            </div>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Orange Juice</span>
+                        <span data-lang="ar">عصير برتقال</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">18 SR</span>
+                    <span class="price" data-lang="ar">18 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Apple Juice</span>
+                        <span data-lang="ar">عصير تفاح</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">18 SR</span>
+                    <span class="price" data-lang="ar">18 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Carrot Juice</span>
+                        <span data-lang="ar">عصير جزر</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">16 SR</span>
+                    <span class="price" data-lang="ar">16 ريال</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Extras Section -->
+        <section id="extras" class="menu-section mb-5">
+            <div class="section-title">
+                <h2 class="section-heading">
+                    <span data-lang="en">Extras</span>
+                    <span data-lang="ar">الإضافات</span>
+                </h2>
+            </div>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Extra Shot</span>
+                        <span data-lang="ar">شوت إضافي</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">5 SR</span>
+                    <span class="price" data-lang="ar">5 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Whipped Cream</span>
+                        <span data-lang="ar">كريمة مخفوقة</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">4 SR</span>
+                    <span class="price" data-lang="ar">4 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Caramel Syrup</span>
+                        <span data-lang="ar">شراب كراميل</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">3 SR</span>
+                    <span class="price" data-lang="ar">3 ريال</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cold Coffee Section -->
+        <section id="cold-coffee" class="menu-section mb-5">
+            <div class="section-title">
+                <h2 class="section-heading">
+                    <span data-lang="en">Cold Coffee</span>
+                    <span data-lang="ar">القهوة الباردة</span>
+                </h2>
+            </div>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Iced Latte</span>
+                        <span data-lang="ar">لاتيه مثلج</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">22 SR</span>
+                    <span class="price" data-lang="ar">22 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Frappuccino</span>
+                        <span data-lang="ar">فرابتشينو</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">24 SR</span>
+                    <span class="price" data-lang="ar">24 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Cold Brew</span>
+                        <span data-lang="ar">كولد برو</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">20 SR</span>
+                    <span class="price" data-lang="ar">20 ريال</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Snacks Section -->
+        <section id="snacks" class="menu-section mb-5">
+            <div class="section-title">
+                <h2 class="section-heading">
+                    <span data-lang="en">Snacks</span>
+                    <span data-lang="ar">الوجبات الخفيفة</span>
+                </h2>
+            </div>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Mixed Nuts</span>
+                        <span data-lang="ar">مكسرات مشكلة</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">15 SR</span>
+                    <span class="price" data-lang="ar">15 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">French Fries</span>
+                        <span data-lang="ar">بطاطس مقلية</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">12 SR</span>
+                    <span class="price" data-lang="ar">12 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Chips</span>
+                        <span data-lang="ar">شيبس</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">8 SR</span>
+                    <span class="price" data-lang="ar">8 ريال</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Desserts Section -->
+        <section id="desserts" class="menu-section mb-5">
+            <div class="section-title">
+                <h2 class="section-heading">
+                    <span data-lang="en">Desserts</span>
+                    <span data-lang="ar">الحلويات</span>
+                </h2>
+            </div>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <span class="item-name">
+                        <span data-lang="en">Chocolate Cake</span>
+                        <span data-lang="ar">كيك الشوكولاتة</span>
+                    </span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">25 SR</span>
+                    <span class="price" data-lang="ar">25 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name" data-lang="en">Ice Cream</span>
+                    <span class="item-name" data-lang="ar">آيس كريم</span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">22 SR</span>
+                    <span class="price" data-lang="ar">22 ريال</span>
+                </div>
+                <div class="menu-item">
+                    <span class="item-name" data-lang="en">Vanilla Pudding</span>
+                    <span class="item-name" data-lang="ar">بودنج الفانيليا</span>
+                    <span class="dots"></span>
+                    <span class="price" data-lang="en">18 SR</span>
+                    <span class="price" data-lang="ar">18 ريال</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</main>
+</body>
+</html>
