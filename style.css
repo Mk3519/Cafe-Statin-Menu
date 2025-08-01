@@ -10,7 +10,7 @@
 
 #sandwiches {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                      url('image/sandwiches.jpg');
+                      url('image/sandwiches.png');
     will-change: opacity;
     background-size: cover;
     background-position: center;
@@ -19,7 +19,7 @@
 
 #bakery {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                      url('image/bakery.jpg');
+                      url('image/bakery.png');
     will-change: opacity;
     background-size: cover;
     background-position: center;
@@ -284,47 +284,47 @@ h1 {
 
 #sandwiches {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                      url('image/Sandwiches.jpg');
+                      url('image/Sandwiches.png');
 }
 
 #bakery {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                      url('image/Bakery.jpg');
+                      url('image/Bakery.png');
 }
 
 #hot-drinks {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                      url('image/Hot Coffee.jpg');
+                      url('image/Hot Coffee.png');
 }
 
 #hot-coffee {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                      url('image/Hot Drinks.jpg');
+                      url('image/Hot Drinks.png');
 }
 
 #fresh-juice {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                      url('image/Fresh Juice.jpg');
+                      url('image/Fresh Juice.png');
 }
 
 #extras {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                      url('image/extras.jpg');
+                      url('image/extras.png');
 }
 
 #cold-coffee {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                      url('image/Cold Coffee.jpg');
+                      url('image/Cold Coffee.png');
 }
 
 #snacks {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                      url('image/Snacks.jpg');
+                      url('image/Snacks.png');
 }
 
 #desserts {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                      url('image/Dessert.jpg');
+                      url('image/Dessert.png');
 }
 
 .section-title, .menu-list {
