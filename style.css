@@ -294,12 +294,12 @@ h1 {
 
 #hot-drinks {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                      url('image/Hot Coffee.png');
+                      url('image/Hot Drinks.png');
 }
 
 #hot-coffee {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                      url('image/Hot Drinks.png');
+                      url('image/Hot Coffee.png');
 }
 
 #fresh-juice {
@@ -325,6 +325,27 @@ h1 {
 #desserts {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
                       url('image/Dessert.png');
+}
+
+#smoothies {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                      url('image/smoothies.png');
+}
+
+#soft-drinks {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                      url('image/soft-drinks.png');
+}
+
+#cold-drinks {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                      url('image/cold-drinks.png');
+}
+
+
+#snacks {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                      url('image/snacks.png');
 }
 
 .section-title, .menu-list {
