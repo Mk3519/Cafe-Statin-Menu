@@ -655,3 +655,10 @@ header .lead {
         padding: 10px 0;
     }
 }
+
+.copyright {
+    color: var(--cream-light);
+    font-size: 0.9rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+}
