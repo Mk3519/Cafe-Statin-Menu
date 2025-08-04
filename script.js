@@ -49,24 +49,57 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// منع استخدام زر الماوس الأيمن
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-});
-
-// منع استخدام مفاتيح التحكم
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey || e.keyCode == 123) { // F12
+// تعطيل كافة وظائف التفتيش
+(function() {
+    // منع استخدام زر الماوس الأيمن
+    document.addEventListener('contextmenu', function(e) {
         e.preventDefault();
-    }
-});
+        return false;
+    });
 
-// منع عرض مصدر الصفحة
-document.addEventListener('keydown', function(e) {
-    if (e.ctrlKey && e.keyCode == 85) { // Ctrl + U
-        e.preventDefault();
-    }
-});
+    // منع مفاتيح التحكم والتفتيش
+    document.addEventListener('keydown', function(e) {
+        if (
+            // F12
+            e.keyCode === 123 || 
+            // Ctrl+Shift+I, Cmd+Option+I
+            (e.ctrlKey && e.shiftKey && e.keyCode === 73) ||
+            (e.metaKey && e.altKey && e.keyCode === 73) ||
+            // Ctrl+Shift+C, Cmd+Option+C
+            (e.ctrlKey && e.shiftKey && e.keyCode === 67) ||
+            (e.metaKey && e.altKey && e.keyCode === 67) ||
+            // Ctrl+Shift+J, Cmd+Option+J
+            (e.ctrlKey && e.shiftKey && e.keyCode === 74) ||
+            (e.metaKey && e.altKey && e.keyCode === 74) ||
+            // Ctrl+U, Cmd+U
+            (e.ctrlKey && e.keyCode === 85) ||
+            (e.metaKey && e.keyCode === 85)
+        ) {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    // منع فتح أدوات المطور
+    setInterval(function() {
+        if (window.devtools.isOpen) {
+            window.location.reload(true);
+        }
+    }, 1000);
+
+    // تعطيل خيارات التطوير
+    window.devtools = {
+        isOpen: false,
+        orientation: undefined
+    };
+    
+    // مراقبة تغييرات حجم النافذة (يمكن أن تشير إلى فتح أدوات المطور)
+    window.addEventListener('resize', function() {
+        if ((window.outerHeight - window.innerHeight) > 100) {
+            window.devtools.isOpen = true;
+        }
+    });
+})();
 
 document.addEventListener('DOMContentLoaded', function() {
     const loader = document.querySelector('.page-loader');
