@@ -426,7 +426,7 @@ h1 {
 
 #milk-shake {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                      url('image/snacks.png');
+                      url('image/milkshake.png');
 }
 
 .section-title, .menu-list {
@@ -667,5 +667,6 @@ header .lead {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     opacity: 0.8;
 }
+
 
 
