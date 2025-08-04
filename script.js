@@ -49,6 +49,25 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// منع استخدام زر الماوس الأيمن
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
+// منع استخدام مفاتيح التحكم
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey || e.keyCode == 123) { // F12
+        e.preventDefault();
+    }
+});
+
+// منع عرض مصدر الصفحة
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && e.keyCode == 85) { // Ctrl + U
+        e.preventDefault();
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const loader = document.querySelector('.page-loader');
     const content = document.querySelector('.page-content');
