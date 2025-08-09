@@ -18,13 +18,22 @@ document.addEventListener('DOMContentLoaded', function() {
         document.documentElement.lang = savedLang;
     }
 
-    // Add smooth scrolling effect
+    // Add smooth scrolling effect with iOS fix
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+        ['click', 'touchend'].forEach(eventName => {
+            anchor.addEventListener(eventName, function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+                return false;
+            }, { passive: false });
         });
     });
 
