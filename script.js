@@ -189,12 +189,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // صور الخلفية
         const sections = ['sandwiches', 'bakery', 'hot-drinks', 'hot-coffee', 
-                        'fresh-juice', 'extras', 'cold-coffee', 'snacks', 'desserts'];
+                        'fresh-juice', 'extras', 'cold-coffee', 'snacks', 'desserts' , 'pizzas'];
         
         sections.forEach(section => {
             const promise = new Promise((resolve) => {
                 const img = new Image();
-                img.src = `image/${section}.jpg`;
+                img.src = `image/${section}.png`;
                 img.onload = resolve;
                 img.onerror = resolve;
             });
