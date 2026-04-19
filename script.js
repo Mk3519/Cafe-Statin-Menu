@@ -1,6 +1,79 @@
 // Set initial language
 document.documentElement.lang = 'en';
 
+// ========== RENDER MENU FROM PRODUCTS.JS ==========
+// This function generates all menu sections and items dynamically from menuData
+
+function renderMenuFromData() {
+    const container = document.getElementById('menu-container');
+    
+    menuData.forEach(category => {
+        // Create section element
+        const section = document.createElement('section');
+        section.id = category.id;
+        section.className = 'menu-section mb-5';
+        
+        // Create section title
+        const sectionTitle = document.createElement('div');
+        sectionTitle.className = 'section-title';
+        sectionTitle.innerHTML = `
+            <h2 class="section-heading">
+                <span data-lang="en">${category.nameEn}</span>
+                <span data-lang="ar">${category.nameAr}</span>
+            </h2>
+        `;
+        section.appendChild(sectionTitle);
+        
+        // Create menu list
+        const menuList = document.createElement('div');
+        menuList.className = 'menu-list';
+        
+        // Add each product
+        category.products.forEach(product => {
+            const menuItem = document.createElement('div');
+            menuItem.className = 'menu-item';
+            menuItem.innerHTML = `
+                <span class="item-name">
+                    <span data-lang="en">${product.nameEn}</span>
+                    <span data-lang="ar">${product.nameAr}</span>
+                </span>
+                <span class="dots"></span>
+                <span class="price" data-lang="en">${product.price}</span>
+                <span class="price" data-lang="ar">${product.price}</span>
+            `;
+            menuList.appendChild(menuItem);
+        });
+        
+        section.appendChild(menuList);
+        container.appendChild(section);
+    });
+    
+    // Setup animations for new menu items
+    setupMenuAnimations();
+}
+
+// Setup menu item animations (fade in on scroll)
+function setupMenuAnimations() {
+    const menuItems = document.querySelectorAll('.menu-item');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    menuItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'all 0.5s ease-out';
+        observer.observe(item);
+    });
+}
+
 // Function to toggle language
 function toggleLanguage() {
     const html = document.documentElement;
@@ -17,6 +90,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (savedLang) {
         document.documentElement.lang = savedLang;
     }
+
+    // ========== RENDER MENU FROM PRODUCTS DATA ==========
+    renderMenuFromData();
 
     // Add smooth scrolling effect with iOS fix
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -35,26 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 return false;
             }, { passive: false });
         });
-    });
-
-    // إضافة تأثيرات ظهور العناصر عند التمرير
-    const menuItems = document.querySelectorAll('.menu-item');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    menuItems.forEach(item => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(20px)';
-        item.style.transition = 'all 0.5s ease-out';
-        observer.observe(item);
     });
 });
 
