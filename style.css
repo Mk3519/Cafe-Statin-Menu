@@ -101,6 +101,15 @@
     background-position: center;
     transition: opacity 0.3s ease;
 }
+
+#pizzas {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                      url('image/pizzas.png');
+    will-change: opacity;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease;
+}
 ccent: #000000;
 
 }
