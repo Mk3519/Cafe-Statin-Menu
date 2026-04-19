@@ -104,7 +104,7 @@
 
 #pizzas {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                      url('image/pizzas.png');
+                      url('image/Pizzas.png');
     will-change: opacity;
     background-size: cover;
     background-position: center;
